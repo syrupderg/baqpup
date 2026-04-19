@@ -36,8 +36,8 @@ RestartSec=5
 [Install]
 WantedBy=default.target
 ```
-6. Reload systemct: `sudo systemctl --user daemon-reload`
-7. Make the service run when the starts: `sudo systemctl --user enable --now baqpup.service`
+6. Reload systemctl: `systemctl --user daemon-reload`
+7. Make the service run when the system starts: `systemctl --user enable --now baqpup.service`
 8. Done!
 
 ### For OpenRC:
@@ -64,10 +64,10 @@ depend() {
     need net
 }
 ```
-7. Make the script file executable: `sudo chmod +x /etc/init.d/baqpup`
-8. Make the service run when the system start: `sudo rc-update add baqpup default`
-9. Start the service: `sudo rc-service baqpup start`
-10. Done!
+5. Make the script file executable: `sudo chmod +x /etc/init.d/baqpup`
+6. Make the service run when the system start: `sudo rc-update add baqpup default`
+7. Start the service: `sudo rc-service baqpup start`
+8. Done!
 
 ### For KDE Plasma:
 1. Open System Settings.
