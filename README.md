@@ -2,12 +2,13 @@
 baqpup (Basic Automatic qBittorrent Port Updater for ProtonVPN), is a bash script that runs in the linux terminal and updates qBittorrent port to the Proton VPN port automatically.
 
 # How to use?
-1. Enable WebUI in qBittorrent. <br> (Preferences -> WebUI -> Turn on "Web User Interface (Remote control)" and "Bypass authentication for clients on localhost")
-2. Make a file named `baqpup.sh`.
-3. Copy the code from [here](#code), paste it in the script file and save it.
-4. Make the script file executable by running `chmod +x baqpup.sh`.
-5. Run the script by typing `./baqpup.sh` or `sh baqpup.sh` in the terminal/konsole.
-6. Done!
+1. Install `curl`
+2. Enable WebUI in qBittorrent. <br> (Preferences -> WebUI -> Turn on "Web User Interface (Remote control)" and "Bypass authentication for clients on localhost")
+3. Make a file named `baqpup.sh`.
+4. Copy the code from [here](#code), paste it in the script file and save it.
+5. Make the script file executable by running `chmod +x baqpup.sh`.
+6. Run the script by typing `./baqpup.sh` or `sh baqpup.sh` in the terminal/konsole.
+7. Done!
 
 # What is it supported on?
 I have tested my script on Arch Linux with KDE Plasma 6.6.4 on qBittorrent 5.1.4-2 and proton-vpn-gtk-app 4.15.2-1. <br>
