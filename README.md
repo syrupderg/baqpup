@@ -85,12 +85,6 @@ depend() {
 4. Pick the `baqpup.sh` file.
 5. Done!
 
-### or,
-
-1. Copy the script file.
-2. Paste it in `~/.config/autostart/` directory.
-3. Done!
-
 # Code
 ```bash
 #!/bin/bash
