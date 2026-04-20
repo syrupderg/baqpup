@@ -21,11 +21,11 @@ If you run into any issues or have feature ideas, report it in [GitHub Issues](h
 
 
 # Automatically running the file in the background:
-1. [For Systemd](#for-systemd)
-2. [For OpenRC](#for-openrc)
-3. [For KDE Plasma](#for-kde-plasma)
+1. [Systemd](#systemd)
+2. [OpenRC](#openrc)
+3. [KDE Plasma](#kde-plasma)
 
-## For Systemd:
+## Systemd:
 1. `mkdir -p ~/.local/bin`
 2. `mv baqpup.sh ~/.local/bin/`
 3. `chmod +x ~/.local/bin/baqpup.sh`
@@ -49,7 +49,7 @@ WantedBy=default.target
 7. Make the service run when the system starts: `systemctl --user enable --now baqpup.service`
 8. Done!
 
-## For OpenRC:
+## OpenRC:
 1. `mkdir -p ~/.local/bin`
 2. `mv baqpup.sh ~/.local/bin/`
 3. `chmod +x ~/.local/bin/baqpup.sh`
@@ -78,7 +78,7 @@ depend() {
 7. Start the service: `sudo rc-service baqpup start`
 8. Done!
 
-## For KDE Plasma:
+## KDE Plasma:
 1. Open System Settings.
 2. Scroll all the way down and click on "Autostart"
 3. Click on "Add new" -> "Login script..."
