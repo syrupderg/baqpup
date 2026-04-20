@@ -12,11 +12,20 @@ baqpup (Basic Automatic qBittorrent Port Updater for ProtonVPN), is a bash scrip
 
 # What is it supported on?
 I have tested my script on Arch Linux with KDE Plasma 6.6.4 on qBittorrent 5.1.4-2 and proton-vpn-gtk-app 4.15.2-1. <br>
-I did not tested it on other distros, other desktop environments and Proton VPN apps for Arch Linux, if you run into any issues or have feature ideas, report it in [GitHub Issues](https://github.com/syrupderg/baqpup/issues).
+I did not tested it on other distros and other desktop environments. <br>
+If you run into any issues or have feature ideas, report it in [GitHub Issues](https://github.com/syrupderg/baqpup/issues).
 
-# Extras
-## Automatically running the file in the background
-### For Systemd:
+> [!IMPORTANT]
+> "proton-vpn-cli" and "proton-vpn-qt-app" does not work with this script. <br>
+> This might be because of me since they also did not work with the [ProtonVPN guide for maual port forwarding setup](https://protonvpn.com/support/port-forwarding-manual-setup#linux).
+
+
+# Automatically running the file in the background:
+1. [For Systemd](#for-systemd)
+2. [For OpenRC](#for-openrc)
+3. [For KDE Plasma](#for-kde-plasma)
+
+## For Systemd:
 1. `mkdir -p ~/.local/bin`
 2. `mv baqpup.sh ~/.local/bin/`
 3. `chmod +x ~/.local/bin/baqpup.sh`
@@ -40,7 +49,7 @@ WantedBy=default.target
 7. Make the service run when the system starts: `systemctl --user enable --now baqpup.service`
 8. Done!
 
-### For OpenRC:
+## For OpenRC:
 1. `mkdir -p ~/.local/bin`
 2. `mv baqpup.sh ~/.local/bin/`
 3. `chmod +x ~/.local/bin/baqpup.sh`
@@ -69,12 +78,18 @@ depend() {
 7. Start the service: `sudo rc-service baqpup start`
 8. Done!
 
-### For KDE Plasma:
+## For KDE Plasma:
 1. Open System Settings.
 2. Scroll all the way down and click on "Autostart"
 3. Click on "Add new" -> "Login script..."
 4. Pick the `baqpup.sh` file.
 5. Done!
+
+### or,
+
+1. Copy the script file.
+2. Paste it in `~/.config/autostart/` directory.
+3. Done!
 
 # Code
 ```bash
